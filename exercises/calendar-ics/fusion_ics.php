@@ -39,6 +39,9 @@
 
   }
 
+  // UNFINISHED: etes_vous_libre() is pseudo-code and does not parse yet.
+  // Kept commented out (not deleted) until its logic is written.
+  /*
   function etes_vous_libre($array_agenda, $str_date){
     $i=0;
 
@@ -77,6 +80,7 @@
   }
 
   }
+  */
 
   //envoi_ics(fusion_ics("./agenda1.ics", "./agenda2.ics"), "agenda3.ics");
 

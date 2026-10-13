@@ -9,7 +9,7 @@ function emulate_smtp($sock){
 
     static $queue = array();
 	if (!$sock) return '';
-    echo "Prise en charge d'un client sur $sock\n";
+    echo "Prise en charge d'un client sur " . spl_object_id($sock) . "\n";
 	// Message de bienvenue
 	socket_write($sock, "220 Simple Mail Transfer Pseudo\n");
 	$etape = $from = $data = '';
