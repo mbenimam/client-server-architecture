@@ -20,7 +20,6 @@ function phraser($file, $obj)
             break;
         }
     }
-    xml_parser_free($sax);
     return $data ;
 }
 ?>

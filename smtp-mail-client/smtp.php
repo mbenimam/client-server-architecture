@@ -9,7 +9,7 @@ require_once('mime_smtp.php');
 
     $sock = @fsockopen($server, $port, $e, $m);
     reponse_smtp($sock);
-    fputs($sock, 'EHLO ' .$server.'\r\n');
+    fputs($sock, "EHLO $server\r\n");
     reponse_smtp($sock);
     arg_smtp($sock ,$emet,'MAIL FROM');
     foreach($dest as $m) arg_smtp($sock, $m);
@@ -17,7 +17,7 @@ require_once('mime_smtp.php');
     reponse_smtp($sock);
 
     if(!$sujet){
-      fputs($sock, $corps);
+      fputs($sock, $corp);
     }else{
       mime_smtp($emet, $dest, $sujet, $corp, $sock);
     }
